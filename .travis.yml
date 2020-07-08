@@ -35,7 +35,7 @@ install:
   - rm -rf psycopg2.egg-info
   - sudo scripts/travis_prepare.sh
   
- env:
+env:
   - export DONT_TEST_PRESENT=0
   - export TEST_FUTURE=0
   - export TEST_VERBOSE=0
