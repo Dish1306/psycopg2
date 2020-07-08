@@ -34,14 +34,16 @@ install:
   - pip install .
   - rm -rf psycopg2.egg-info
   - sudo scripts/travis_prepare.sh
-
-script:
+  
+ env:
   - export DONT_TEST_PRESENT=0
   - export TEST_FUTURE=0
   - export TEST_VERBOSE=0
   - export PSYCOPG2_TEST_FAST=0
   - export TEST_PAST=1
   - export TRAVIS_TOKEN=[secure]
+
+script:
   - scripts/travis_test.sh
 
 deploy:
