@@ -17,8 +17,6 @@ matrix:
     - arch: amd64
       python: 3.4
     - arch: arm64
-      python: 2.7
-    - arch: arm64
       python: 3.8
     - arch: arm64
       python: 3.7
@@ -26,15 +24,16 @@ matrix:
       python: 3.6
     - arch: arm64
       python: 3.5
-    - arch: arm64
-      python: 3.4
       
 install:
-  - pip install -U pip setuptools wheel bc 
+  - pip install -U pip setuptools wheel 
   - pip install .
   - rm -rf psycopg2.egg-info
   - sudo scripts/travis_prepare.sh
   
+ apt:
+    packages:
+      - bc
 env:
   - export DONT_TEST_PRESENT=0
   - export TEST_FUTURE=0
