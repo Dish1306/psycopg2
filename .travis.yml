@@ -30,7 +30,6 @@ install:
   - pip install .
   - rm -rf psycopg2.egg-info
   - sudo scripts/travis_prepare.sh
-  
  apt:
     packages:
       - bc
