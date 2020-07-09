@@ -24,9 +24,6 @@ matrix:
       python: 3.6
     - arch: arm64
       python: 3.5
-      
-before_install:
-  - sudo apt-get update
 
 addons:
   apt:
