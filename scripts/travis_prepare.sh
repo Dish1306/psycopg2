@@ -46,7 +46,7 @@ create () {
                 sudo apt-get update -y
             fi
             sudo apt-get install -y \
-                postgresql-server-dev-${VERSION} postgresql-${VERSION}
+                postgresql-server-dev postgresql
         else
             # A dinosaur
             wget -O - \
