@@ -25,12 +25,10 @@ matrix:
     - arch: arm64
       python: 3.5
       
-before_install:
-  - sudo apt-get -y install bc
-  - sudo apt-get install -y postgresql-server-dev-12 postgresql-12
 addons:
   apt:
-    update: true
+    packages:
+    - bc
       
 install:
   - pip install -U pip setuptools wheel 
