@@ -27,6 +27,7 @@ matrix:
       
 before_install:
   - sudo apt-get -y install bc
+  - sudo apt-get install -y postgresql-server-dev-12 postgresql-12
 addons:
   apt:
     update: true
