@@ -32,8 +32,6 @@ addons:
   apt:
     packages:
     - bc
-    - postgresql-server-dev-12 
-    - postgresql-12
       
 install:
   - pip install -U pip setuptools wheel 
